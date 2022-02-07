@@ -1,0 +1,116 @@
+<!--Cristina Osei Borges 1º ASIR B-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo de HTML Cristina</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="../imagenes/favicon-96x96.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <div id="header">
+        <p>
+        <ul>
+            <li><a href="../index.html">Tim Berners-Lee</a></li>
+            <li><a href="portfolio.html">Porfolio</a></li>
+            <li><a href="precios.html">Tabla de Precios</a></li>
+            <li><a href="contactame.html">Contactame</a></li>
+        </ul>
+        </p>
+        <p>
+            <img src="../imagenes/imagen-menu.png" usemap="#menu">
+            <map name="menu">
+                <area shape="rect" coords="15,44,108,132" href="../index.html">
+                <area shape="circle" coords="172,89,44" href="portfolio.html">
+                <area shape="polygon" coords="344,135,288,42,230,135" href="precios.html">
+                <area shape="rect" coords="439,32,351,141" href="contactame.html">
+            </map>
+        </p>
+    </div>
+    <div id="main-content">
+        <h1>Contactame</h1>
+        <h2>Formulario de contacto</h2>
+        <form method="post" action="contactar.php" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Introduce tu nombre..." size="40"
+                        required>
+                    <abbr title="Campo obligatorio"> * </abbr>
+                </div>
+                <div>
+                    <label for="apellidos">Apellidos: </label>
+                    <input id="apellidos" type="text" name="apellidos" placeholder="Introduce tu apellido..." size="40"
+                        required>
+                    <abbr title="Campo obligatorio"> * </abbr>
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" name="email" required pattern="\@">
+                    <abbr title="Campo obligatorio"> * </abbr>
+                </div>
+                <div>
+                    <label for="fecha">Fecha de Nacimiento: </label>
+                    <input id="fecha" type="date" name="fecha">
+                </div>
+                <div>
+                    <label for="edad">Edad: </label>
+                    <input id="edad" type="number" name="edad" min="10" max="100">
+                </div>
+                <div>
+                    Sexo:
+                    <label><input type="radio" name="sexo" value="H">Hombre</label>
+                    <label><input type="radio" name="sexo" value="M">Mujer</label>
+                </div>
+                <div>
+                    <label for="pais">País: </label>
+                    <select name="pais" id="pais">
+                        <option value="" selected="selected">- Selecciona -</option>
+                        <option value="España">España</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Italia">Italia</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Otros Datos</legend>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="50" rows="10" spellcheck="true"
+                        placeholder="Introduce tu mensaje..."></textarea>
+                </div>
+                <div>
+                    <label for="adjunto">Adjunta una foto...</label>
+                    <input id="adjunto" type="file" accept=".jpg,.png">
+                </div>
+            </fieldset>
+            <div>
+                <input id="condiciones" type="checkbox" name="condiciones" required>
+                <label for="condiciones">He leído las condiciones... </label>
+            </div>
+            <div>
+                <input type="reset" value="Limpiar" name="limpiar">
+                <input type="submit" value="Enviar" name="enviar">
+            </div>
+
+        </form>
+    </div>
+    <div id="side-content">
+        <h1>Centro de referencia</h1>
+        <p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14031.118932241417!2d-16.2832682!3d28.4560556!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab9f2a74d9e68b51!2sCIFP%20C%C3%A9sar%20Manrique!5e0!3m2!1ses!2ses!4v1644206668175!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </p>
+    </div>
+    <div id="footer">
+        © 2040 <a href="../index.html">www.MiSitio.com</a>
+    </div>
+    <div>
+        <br>
+    </div>
+</body>
